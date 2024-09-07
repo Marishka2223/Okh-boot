@@ -1,0 +1,185 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap Example</title>
+  <!-- Подключение Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.css">
+</head>
+<body>
+  <p>Оптимизация верстки с помощью фреймворка Bootstrap!</p>
+
+  <!-- Работа с текстом -->
+  <div class="container text-center">
+    <h1>Bootstrap</h1>
+    <h2 class="text-black-50">Bootstrap</h2>
+    <h3>Bootstrap</h3>
+    <h4 class="text-black-50">Bootstrap</h4>
+    <h5>Bootstrap</h5>
+    <h6 class="text-black-50">Bootstrap</h6>
+  </div>
+
+  <!-- Работа с сеткой -->
+  <div class="container">
+    <!-- Равные части -->
+    <div class="row">
+      <div class="col-sm-4">1</div>
+      <div class="col-sm-4">2</div>
+      <div class="col-sm-4">3</div>
+    </div>
+    <!-- Разные части -->
+    <div class="row">
+      <div class="col">1</div>
+      <div class="col-6">2</div>
+      <div class="col">3</div>
+    </div>
+    <div class="row">
+      <div class="col">1</div>
+      <div class="col-5">2</div>
+      <div class="col">3</div>
+    </div>
+  </div>
+
+  <!-- Работа с таблицами -->
+  <div class="container">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>1</th>
+          <th>2</th>
+          <th>3</th>
+          <th>4</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td class="table-success">3</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Работа с уведомлениями -->
+  <div class="container">
+    <div class="alert alert-primary" role="alert">Primary</div>
+    <div class="alert alert-secondary" role="alert">Secondary</div>
+    <div class="alert alert-success" role="alert">Success</div>
+    <div class="alert alert-danger" role="alert">Danger</div>
+    <div class="alert alert-warning" role="alert">Warning</div>
+    <div class="alert alert-info" role="alert">Info</div>
+  </div>
+
+  <!-- Работа с кнопками -->
+  <div class="container">
+    <button type="button" class="btn btn-default">Default</button>
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-info">Info</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+    <button type="button" class="btn btn-danger">Danger</button>
+    <button type="button" class="btn btn-link">Link</button>
+  </div>
+
+  <!-- Работа с формами -->
+  <div class="container">
+    <!-- Форма с email и password -->
+    <form>
+      <div class="form-group">
+        <input type="email" class="form-control" placeholder="Введите email">
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" placeholder="Введите пароль">
+      </div>
+    </form>
+
+    <!-- Форма с checkbox -->
+    <form>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+        <label class="form-check-label" for="defaultCheck1">
+          Нажми меня
+        </label>
+      </div>
+    </form>
+
+    <!-- Форма с radio -->
+    <form>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+        <label class="form-check-label" for="exampleRadios1">
+          Нажми
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+        <label class="form-check-label" for="exampleRadios2">
+          Нажми
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
+        <label class="form-check-label" for="exampleRadios3">
+          Нажми
+        </label>
+      </div>
+    </form>
+
+    <!-- Форма с текстовыми полями -->
+    <form>
+      <div class="row">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Имя">
+          <small class="text-muted">Введите имя</small>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Фамилия">
+          <small class="text-muted">Введите фамилию</small>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Адрес" disabled>
+          <small class="text-muted">Введите адрес</small>
+        </div>
+      </div>
+    </form>
+
+    <!-- Форма с выпадающим списком -->
+    <form>
+      <div class="form-group">
+        <select class="form-control">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+    </form>
+  </div>
+
+  <!-- Подключение Bootstrap JS и зависимостей -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+  </html> 
