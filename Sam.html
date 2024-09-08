@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма заполнения</title>
+    <!-- Подключение Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form id="myForm" class="text-center">
+                    <!-- Имя, Фамилия, Отчество -->
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="firstName">Имя</label>
+                            <input type="text" class="form-control" id="firstName" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="lastName">Фамилия</label>
+                            <input type="text" class="form-control" id="lastName" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="middleName">Отчество</label>
+                            <input type="text" class="form-control" id="middleName" required>
+                        </div>
+                    </div>
+
+                    <!-- Выбор города -->
+                    <div class="form-group">
+                        <label for="city" class="text-info">Выберите город из списка:</label>
+                        <select class="form-control" id="city">
+                            <option>Москва</option>
+                            <option>Санкт-Петербург</option>
+                            <option>Челябинск</option>
+                            <option>Геленджик</option>
+                        </select>
+                    </div>
+
+                    <!-- Ввод сообщения -->
+                    <div class="form-group">
+                        <label for="message">Введите сообщение:</label>
+                        <textarea class="form-control" id="message" rows="5" required></textarea>
+                    </div>
+
+                    <!-- Кнопка отправки -->
+                    <button type="submit" class="btn btn-success">Отправить</button>
+                </form>
+
+                <!-- Модальное окно для сообщений -->
+                <div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="messageModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="messageModalLabel">Сообщение</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body" id="modalMessage">
+                                <!-- Сообщение будет вставляться сюда -->
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Подключение Bootstrap JS и jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const middleName = document.getElementById('middleName').value;
+            const message = document.getElementById('message').value;
+
+            if (firstName && lastName && middleName && message) {
+                document.getElementById('modalMessage').textContent = 'Успешно отправлено';
+            } else {
+                document.getElementById('modalMessage').textContent = 'Данные введены некорректно';
+            }
+
+            $('#messageModal').modal('show');
+        });
+    </script>
+</body>
+              </html>
